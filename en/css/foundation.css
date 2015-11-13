@@ -3129,13 +3129,13 @@ a img {
 /* Default paragraph styles */
 
 p {
-    font-family: 'Lyon Text OSF Web';
+    font-family: Georgia, serif;
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
     font-size: 1rem;
     font-weight: normal;
-    line-height: 1.6;
+    line-height: 1.8;
     margin-bottom: 1.25rem;
     text-rendering: optimizeLegibility;
 }
@@ -3158,7 +3158,7 @@ h4,
 h5,
 h6 {
     color: #262626;
-    font-family: 'Lyon Text OSF Web';
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
@@ -3172,7 +3172,7 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-    font-family: 'Lyon Text OSF Web';
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
