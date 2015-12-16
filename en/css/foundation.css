@@ -3114,13 +3114,13 @@ td {
 /* Default Link Styles */
 
 a {
-    color: #2ba6cb;
+    color: #c60f13;
     line-height: inherit;
     text-decoration: none;
 }
 a:hover,
 a:focus {
-    color: #258faf;
+    color: #911215;
 }
 a img {
     border: none;
