@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invisible Killer</title>
+    <title>MO* | Invisible Killer</title>
     <link rel="stylesheet" href="css/font/fonts.css" />
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -14,16 +14,52 @@
 
     <script type="text/javascript" src=" https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/app.js"></script>
+    <style>
+        #Reading-progress {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            height: 2px;
+            margin: 0px;
+            margin-top: 50px;
+            left: 0px;
+            z-index: 1099;
+        }
+        
+        .bar {
+            height: 3px;
+            background: #DC000C;
+            position: fixed;
+            top: 0px;
+            z-index: 99;
+        }
+
+    </style>
+    <script>
+        window.addEventListener('scroll', function(e) {
+            var s = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+            var body = document.body;
+            var html = document.documentElement;
+            var d = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+            var c = window.innerHeight;
+            var position = (s / (d - c)) * 100;
+            document.getElementById('Progress-bar').setAttribute('style', 'width: ' + position + '%');
+        });
+
+    </script>
 </head>
 
 <body>
+    <div id="Reading-progress">
+        <span id="Progress-bar" class="bar"></span>
+    </div>
 
     <div class="menu-top-bar">
         <div class="row">
             <div class="small-6 columns">
 
-                <img class="hide-for-small" src="img/logo_mo.png">
-                <img class="show-for-small-only" src="img/logo_int_mobile.jpg">
+                <a href="http://www.mo.be/"><img class="hide-for-small" src="img/logo_mo.png"></a>
+                <a href="http://www.mo.be/"><img class="show-for-small-only" src="img/logo_int_mobile.jpg"></a>
             </div>
             <div class="small-4 columns social">
                 <i style="color:#000" class="fa fa-twitter"></i>
@@ -62,14 +98,14 @@
         <div class="medium-9 columns didascalie space-top">
             <h4>Invisible Killer</h4>
             <br>
-            <h2>Behind the mask:</h2>
-            <h2>South Africa's struggle<br>
-against Tuberculosis</h2>
+            <h2>Achter het masker:</h2>
+            <h2>De strijd tegen tuberculose<br>
+in Zuid-Afrika</h2>
             <hr>
-            <p>Text and Photography <strong>Tomaso Clavarino</strong></p>
+            <p>Tekst en beeld: <strong>Tomaso Clavarino</strong></p>
             <br />
 
-            <p>Design and Video <strong>Isacco Chiaf</strong></p>
+            <p>Ontwerp en video: <strong>Isacco Chiaf</strong></p>
 
 
         </div>
@@ -78,12 +114,15 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="medium-7 columns space">
             <p>
-                <p> <span class="firstcharacter">T</span>he wood and tin shacks are attached to each other. The dirt roads are dusty in the summer, and turn into a quagmire when it starts to rain. The gutters, few and far between, fill up very quickly with milky, putrid water. Kayelitsha is a field of shacks, the second largest South African township, and the one which has grown the most in the past few years. It has reached more than 500thousand inhabitants, 50% of whom are under nineteen. New houses are eating up the last free areas of land, tin huts have arrived at the beach, up to the dunes that mark the only compulsory boundary of this township right at the gates of Cape Town.
-                    <br> Phumeza Tisile is walking, hands in her pockets, a woollen hat on her head, and the straight look of someone who has already gone through a very harsh trial at only 25 years of age. Phumeza was born, and still lives, here in Kayelitsha, and has managed to defeat a killer that cannot yet be seen, heard, nor is in the headlines, especially in the West. A killer that still today condemns 1.5 million people around the world every year, 95% of whom are in the developing countries, and which is the first cause of death here in South Africa. Especially amongst the weaker population groups, those who live in the suburbs of the cities, in those bundles of precarious housing built in filth. Whole families crammed into a few square metres, where the air does not move and bacteria proliferate. That is exactly how South African townships are, despite the 2012 Football World Cup, despite the economic growth of the country, and despite the new middle class boom. In this kind of environment, which represents everyday life in places like Kayelitsha, TB continues to claim victims.
+                <p> <span class="firstcharacter">D</span>e houten en blikken barakken leunen dicht tegen elkaar aan. De onverharde wegen zijn stoffig in de zomer en veranderen in een modderpoel wanneer het begint te regenen. De schaarse riolen vullen zich razendsnel met troebel, vuil water.
+                    <br> Kayelitsha is een barakkenbuurt, het tweede grootste township in Zuid-Afrika. Het is de afgelopen jaren bovendien ook het snelst gegroeid en heeft de kaap van 500 000 bewoners bereikt, waarvan de helft jonger is dan negentien jaar. Nieuwe barakken vullen de laatste beschikbare lappen grond, hutten zijn nu ook neergepoot op het strand, zelfs tot aan de duinen die de enige echte grens tussen het township en de toegang naar Kaapstad vormen.
+                    <br>
+                    <br> Phumeza Tisile wandelt, handen in de zakken, wollen muts op het hoofd en de strakke blik van iemand die op haar vijfentwintigste al een ruw en hard parcours achter de rug heeft. Phumeza is geboren en woont nog steeds hier in Kayelitsha. Ze is erin geslaagd de moordenaar te verslaan die noch gehoord noch gezien wordt. Deze onzichtbare moordenaar blinkt uit in afwezigheid in de mediaberichten in het Westen. Het is een moordenaar die vandaag wereldwijd nog steeds anderhalf miljoen slachtoffers maakt, waarvan 95% in ontwikkelingslanden. Het is de meest voorkomende doodsoorzaak hier in Zuid-Afrika. Dit is voornamelijk het geval voor zwakkere bevolkingsgroepen die leven in de buitenwijken van grote steden, opeengepakt in precaire hutten, omgeven door vuiligheid. Voltallige families bevolken enkele luttele vierkante meters hut waar de lucht als een wolk blijft hangen en bacteriën zich razendsnel verspreiden. Dat is precies hoe de Zuid-Afrikaanse townships eruitzien, ondanks de wereldbeker voetbal van 2012, ondanks de economische groei van het land en ondanks de snelle groei van de nieuwe middenklasse. In dit soort omgeving , die het dagelijkse leven in plekken zoals Kayelitsha illustreert, blijft tuberculose (TB) slachtoffers eisen.
                 </p>
         </div>
         <div class="medium-5 columns space">
-            <img src="img/text_15_mondo.jpg">
+            <img class=" hide-for-small" src="img/text_15_mondo.jpg">
+            <img class=" show-for-small-only" src="img/text_15_mondo_mobile.jpg">
         </div>
     </div>
 
@@ -96,7 +135,9 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="medium-8 columns space">
             <p>
-                «In 2010 I was diagnosed with TB. I started to take the recommended medicines but my body would not respond to them, the medicines had no effect on me – says Phumeza in her garden. After several analyses they told me I did not have ordinary Drug Susceptible TB but the MDR-TB (Multi Drug Resistant) type». This is another form of the disease, which is much more dangerous and created by genetic mutations of the bacteria caused by the incorrect assumption of medicines or by interrupted cures. It is, therefore, resistant to the usual drugs against TB, the ones commonly called “first line treatment”. This is a form of tuberculosis requiring a two-year cure, and the assumption of more or less 14,600 pills and hundreds of injections. A very expensive and painful treatment, not without health risks. «During the treatment period, I felt really bad, I vomited and felt sick all the time, I couldn’t eat, and I slowly lost my hearing. – Phumeza goes on – Until I became completely deaf. But these cures did not have the expected effect, and after more analyses, they told me I was XDR-TB (Extensively Drug Resistant) positive». A form of TB even more dangerous, even more resistant to the traditional medicines administered for this infection. Only with the help of the ONG Médicins Sans Frontières, Phumeza managed finally to receive the Linezolid treatment, a remedy that is very difficult to find in South Africa because of its high cost. In August 2013 she was negative to the tests, but her hearing was still lost. This year she had the chance to have two cochlear implants, and she managed to get her hearing back, along with her speech, finally being able to communicate with others again.
+                ‘In 2010 werd bij mij TB vastgesteld. Ik begon de aanbevolen medicatie te nemen, maar mijn lichaam reageerde er niet op. De medicatie had geen effect op mij’, zegt Phumeza vanuit haar tuin. Na verschillende analyses zeiden ze me dat ik niet de normale vorm van TB had, maar wel MDR-TB (multidrug-resistente tuberculose).’ Dit is een ander type van TB dat veel gevaarlijker is en is ontstaan via genetische mutaties van bacteriën door incorrecte of onderbroken behandelingen met medicatie. Daarom is MDR-TB resistent tegen de gangbare medicatie, die doorgaans ‘eerstelijnsbehandeling’ wordt genoemd.
+                <br> Het is een vorm van tuberculose die een tweejarige behandeling vereist, gepaard met ongeveer 14 600 pillen en honderden injecties. Een bijzonder dure en pijnlijke behandeling die niet vrij is van andere gezondheidsrisico’s.
+                <br> ‘Gedurende de periode van de behandeling voelde ik me heel slecht, ik moest braken en voelde me de hele tijd ziek. Ik kon niet eten en verloor langzaam mijn gehoor tot ik helemaal doof werd’, gaat Phumeza verder. Maar de behandelingen hadden niet het gewenste effect en na nog meer analyses zeiden ze dat ik XDR-TB (extensief- resistente tuberculose) positief was. Dit type tuberculose is nog risicovoller en nog resistenter tegen de traditionele medicatie, gebruikelijk voor deze infectie. Enkel dankzij de hulp van Artsen zonder Grenzen is Phumeza erin geslaagd de Linezolid-behandeling te krijgen. Deze behandeling is in Zuid-Afrika moeilijk te verkrijgen omwille van de hoge kosten. In augustus 2013 testte Phumeza negatief, maar ze had nog steeds haar gehoor niet terug. Dit jaar had ze de kans om twee cochleaire implantaten te krijgen en daardoor kan ze opnieuw horen en spreken. Communicatie met anderen is weer mogelijk.
 
             </p>
         </div>
@@ -119,15 +160,15 @@ against Tuberculosis</h2>
         <br/>
         <div class="medium-5 columns">
             <img src="img/tb_img_01.jpg">
-            <h6>Chanté Snyman, Tb patient</h6>
-            <p>Gugulethu township, Cape Town</p>
+            <h6>Chanté Snyman, TB-patiënt</h6>
+            <p>Gugulethu township, Kaapstad</p>
 
 
         </div>
         <div class="medium-5 columns end">
             <img src="img/tb_img_02.jpg">
-            <h6>Inside a shack</h6>
-            <p>Gugulethu township, Cape Town</p>
+            <h6>Binnenin een hut</h6>
+            <p>Gugulethu township, Kaapstad</p>
         </div>
     </div>
     <br />
@@ -135,8 +176,8 @@ against Tuberculosis</h2>
     <div class="row didascalie">
         <div class="medium-10 columns">
             <img src="img/tb_img_03.jpg">
-            <h6>Moses Michize, MDR-Tb and HIV positive</h6>
-            <p>Clare Estates informal settlement, Durban</p>
+            <h6>Moses Michize, MDR-TB en HIV-positief</h6>
+            <p>Clare Estates, onofficiële nederzetting, Durban</p>
         </div>
     </div>
 
@@ -144,8 +185,8 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="medium-12 columns title-header space">
             <h3>
-                Tuberculosis incidence in the world</h3>
-            <p>Number of cases per 100,000 inhabitants in 70 countries with the highest density</p>
+                Wereldwijde verspreiding van tuberculose</h3>
+            <p>Aantal gevallen per 100 000 inwoners in 70 landen met de hoogste dichtheid</p>
             <hr>
 
             <img src="img/graph_mondiale.jpg">
@@ -157,7 +198,8 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="large-9 columns space">
             <p>
-                Phumeza managed to get over it, but in South Africa, there are many – too many - who get sick and die every year, because of this silent killer, which is just everywhere. More or less 90,000 people every year, which means 10 people every hour. Because it is very easy to catch TB. In the minibuses that function as public transport for the majority of the people, in public spaces, in churches, in bars, in houses, all one needs is one cough, then with poor ventilation and at close range, the bacteria can spread. From the WHO data – it would appear that normal Drug Susceptible TB is slightly diminishing, but the situation related to the resistant forms of tuberculosis, both MDR and XDR, is very worrying. Different types of tuberculosis that have very expensive treatments and consume a great amount of the south African budget available for the cure of this disease. If the treatment for the common TB costs around 250$, the one for the MDR-TB sums up to something like 6,700$, while the XDR-TB is 26,392$ and that is one hundred times more expensive. According to Florian Von Groote, doctor and researcher of Task Applied Science, a research laboratory for anti-tuberculosis medicines, situated in Cape Town, «In the city alone there are more or less two thousand new cases of Drug Resistant TB every year, data which seems to be increasing rapidly. On one side because the frequency and accuracy of tests is improving, thanks to the use of, for instance, Genexpert that reduces diagnostic times, and on the other because not all patients managed to support the treatments, which are long and painful. This is why we are working on a series of medicines that could reduce the treatment to only six months instead of the actual 24 months».
+                ziek worden en sterven door deze stille moordenaar die overal aanwezig lijkt te zijn. Het gaat over ongeveer 90 000 mensen per jaar, dit betekent tien slachtoffers per uur. Het is niet moeilijk om met TB besmet te raken. In de minibusjes die dienst doen als openbaar vervoer voor het merendeel van de bevolking, in openbare plaatsen, in kerken, bars, in huizen is er slechts een hoest of kuch nodig. Door de slechte ventilatie en de nabijheid van anderen kunnen de bacteriën zich moeiteloos verspreiden. Gebaseerd op gegevens van de Wereldgezondheidsorganisatie (WGO) lijkt het erop dat de normale vorm van tuberculose op zijn terugweg is, maar de cijfers omtrent de resistente types van TB, zowel MDR als XDR, zijn zorgwekkend. Deze soorten TB vereisen zeer dure behandelingen en slorpen dus een grote hoeveelheid van het budget voor de genezing van de ziekte op. De prijs van een behandeling voor normale TB is 250 dollar, de prijs voor de MDR-TB behandeling loopt op tot 6 700 dollar, die voor XDR-TB is 26 392 dollar en dus honderdmaal duurder.
+                <br> Florian Von Groote, arts en onderzoeker bij Task Applied Science, een onderzoekslaboratorium voor antituberculosemedicatie in Kaapstad, zegt het volgende: ‘In de stad alleen al zijn er jaarlijks ongeveer 2 000 nieuwe gevallen van drug-resistente TB en deze aantallen stijgen snel. Dit is enerzijds te wijten aan en hogere frequentie en precisie van de tests dankzij het gebruik van, bijvoorbeeld, Genexpert. Genexpert verlaagt de tijd om tot een diagnose te komen. Anderzijds heeft de stijging ermee te maken dat niet alle patiënten de behandeling, die lang en pijnlijk is, kunnen afmaken. Daarom werken we aan een reeks medicatie die de behandelingstijd kan verkorten tot slechts zes maanden in plaats van de huidige 24 maanden.’
             </p>
         </div>
     </div>
@@ -166,8 +208,8 @@ against Tuberculosis</h2>
 
     <div class="row">
         <div class="medium-9 columns end title-header">
-            <h3>Death rate</h3>
-            <p>Click on the gray rectangles to see the death rate of the various declinations of Tuberculosis</p>
+            <h3>Sterftecijfer</h3>
+            <p>Klik op de grijze rechthoeken om het sterftecijfer van de verschillende variaties van tuberculose te zien</p>
             <hr>
         </div>
     </div>
@@ -202,16 +244,18 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="large-8 columns space">
             <p>
-                The cases of MDR-TB in South Africa have risen every year, from two thousand in 2005 to ten thousand in 2013, with a peak of fifteen thousand new infections in 2012, whilst in Western Cape Province, the worst affected one, Tuberculosis in all its forms, infects forty-five thousand people every year. And the chances of survival, for those affected by the drug resistant forms, are still very low: the treatments for the XDR-TB, according to a study lead by the WHO, are successful in 15% of the cases. This is also because of the shortage of medical structures: patients are treated and followed by their community doctors, and very few of them are actually moved to hospital, such as the Brooklyn Chest Hospital, a few kilometres away from the centre of Cape Town. Here, sick people live confined to a hospital wing which is divided according to the gravity of their condition. Men and women, young and old, walk the corridors with their faces covered by masks, to avoid spreading the bacteria. These masks have become an identifying mark for those who have caught TB: indispensable to prevent contagion, unbearable both because uncomfortable and most of all because they attract other people’s attention.
-                <br> Right behind one of those masks, with a faint voice and clouded eyes, constantly coughing, Sive Mapeitu, 27 years old, diagnosed with MDR-TB tells us what is like to be under treatment: «I am always tired, injections are painful, I vomit a lot, I can’t walk for more than a few metres. I started the cure a few months ago and knowing I have to go on for almost two years really depresses me. All of this without even being sure of getting better, risking that the disease becomes more and more drug-resistant». Sive is, well was, a healthcare worker, before she got sick. «I am sure I was infected while working in Guguletu, a township in Cape Town where I used to live and where I spent all day with infected people – she continues – a filthy environment, twenty people using the same bathroom, no sewers, so of course TB proliferates». But most of all, what is missing, according to Sive, is information «People know little or nothing about the new forms of Tuberculosis, do not know how to prevent it, do not understand why the masks are necessary. The majority of people, if they start to cough, they just cure themselves as if they had caught a cold, and if the cough goes on, they pretend they’re fine, very few of them decide, of their own free will, to go and take the test ».
+                Het aantal gevallen van MDR-TB is in Zuid-Afrika elk jaar gestegen, van 2 000 in 2005 tot 10 000 in 2013, met een piek van 15 000 nieuwe infecties in 2012. In de Western Cape provincie, de meest getroffene, besmetten de verschillende vormen van tuberculose 45 000 mensen per jaar. De overlevingskansen voor zij die besmet zijn met het drug-resistente type TB zijn nog steeds erg laag: volgens een studie van de WGO zijn de behandelingen voor XDR-TB in slechts 15% van de gevallen succesvol. Dit heeft ook te maken met het gebrek aan medische infrastructuur. Patiënten worden behandeld en opgevolgd door de gemeenschapsarts en slechts weinigen onder hen worden in het ziekenhuis opgenomen. In het Brooklyn Chest Hospital, een aantal kilometers buiten het centrum van Kaapstad, verblijven patiënten in een aparte vleugel van het ziekenhuis, ingedeeld afhankelijk van de ernst van hun toestand. Mannen en vrouwen, jong en oud, bewegen door de wandelgangen, hun gezichten afgeschermd met mondmaskers om de verspreiding van de bacteriën te voorkomen. Deze maskers zijn een symbool geworden voor diegenen die met TB besmet zijn. Onvermijdelijk om besmetting te voorkomen, maar ondraaglijk omwille van het discomfort en bovendien trekt het onmiddellijk de aandacht.
+                <br>
+                <br> Achter een van deze maskers schuilt Sive Mapeitu, 27 jaar en besmet met MDR-TB. Met troebele ogen en zwakke stem vertelt ze het relaas van haar behandeling. ‘Ik ben altijd moe, de inspuitingen zijn pijnlijk, ik moet veel braken en ik kan slechts een paar meter stappen. Ik startte een paar maanden geleden met de behandeling, maar de gedachte dat het nog bijna twee jaar zal duren, maakt me erg zwaarmoedig. Daarenboven heb ik geen garantie dat ik beter zal worden, want de ziekte zou steeds drug-resistenter kunnen worden.’ Sive is, was, gezondheidswerkster vooraleer ze ziek werd. ‘Ik ben er zeker van dat ik de ziekte tijdens het werk in Guguletu, een township in Kaapstad, heb opgelopen. Ik woonde er en bracht de hele dag tussen besmette mensen door. Het was een vuile omgeving, twintig mensen voor eenzelfde toilet en geen afvoer, natuurlijk verspreidt TB zich daar probleemloos.’ Het grootste gebrek volgens Sive is informatie. ‘De bevolking weet weinig of niks over de nieuwe vormen van tuberculose. Men weet niet hoe de ziekte te voorkomen en men begrijpt niet waarom maskers noodzakelijk zijn.
+                <br> De meerderheid behandelt een beginnende hoest als was het een simpele verkoudheid. Wanneer de hoest hardnekkig en blijvend wordt, doen ze alsof alles oké is. Slechts enkelen beslissen uiteindelijk vrijwillig om zich te laten testen.’
         </div>
         <div class="large-4 columns space didascalie">
 
 
             <img src="img/tb_img_laboratory.jpg">
-            <h6>Bacteriological analysis</h6>
-            <p>In Task Applied Science laboratories
-                <br>in Cape Town</p>
+            <h6>Bacteriologische analyse</h6>
+            <p>In Task Applied Science laboratoria
+                <br>In Kaapstad</p>
             <hr>
 
         </div>
@@ -224,14 +268,14 @@ against Tuberculosis</h2>
         <div class="medium-5 columns grey">
             <img src="img/tb_mask_01.jpg">
             <hr>
-            <h6>Sive Maipetu, MDR-TB positive</h6>
-            <p>Brooklyn Chest Hospital, Cape Town</p>
+            <h6>Sive Maipetu, MDR-TB positief</h6>
+            <p>Brooklyn Chest Hospital, Kaapstad</p>
         </div>
         <div class="medium-5 columns end grey">
             <img src="img/tb_mask_02.jpg">
             <hr>
-            <h6>Sameera Naidoo, MDR-TB positive</h6>
-            <p>Brooklyn Chest Hospital, Cape Town</p>
+            <h6>Sameera Naidoo, MDR-TB positief</h6>
+            <p>Brooklyn Chest Hospital, Kaapstad</p>
         </div>
     </div>
     <br>
@@ -240,13 +284,13 @@ against Tuberculosis</h2>
         <div class="medium-5 columns grey">
             <img src="img/tb_mask_03.jpg">
             <hr>
-            <h6>John Ndlovu, MDR-TB positive</h6>
+            <h6>John Ndlovu, MDR-TB positief</h6>
             <p>Charlotte Maxeke Hospital, Johannesburg</p>
         </div>
         <div class="medium-5 columns end grey">
             <img src="img/tb_mask_04.jpg">
             <hr>
-            <h6>Khaleel Nkosi, MDR-TB positive</h6>
+            <h6>Khaleel Nkosi, MDR-TB positief</h6>
             <p>Charlotte Maxeke Hospital, Johannesburg</p>
         </div>
     </div>
@@ -258,23 +302,24 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="large-6 columns space">
             <p>
-                Disinformation, certainly, but there’s fear, too. Fear of meeting your neighbours on the way to the hospital, fear of having to say to your family that you are TB positive, fear of being left alone, put aside by family and community. In South Africa, in 2015, the TB stigma is still very strong. «When two years ago I discovered I was TB positive, and a little later HIV positive, too, my family disappeared – says Moses Michize, 42 years old, MDR-TB positive, in front of his wooden shack in the Clare Estates township, near Durban. One day I had to go to a ceremony with my relatives. I just got the news that I had TB. I was tired and very sad, and so I told my mother. I have not heard from them since, not a phone call, not a visit for the entire treatment period. I no longer exist to them». Therefore, to avoid social isolation, it is better to hide one’s disease. This is how TB, just like HIV, continues to spread, especially in poor areas, in the most devastated outskirts. Stigma kills just like diseases do.
-                <br> “The Terrible Twins”, is how doctors and professionals over here call Tuberculosis and HIV. Too often they walk together. 70% of those with TB are also HIV positive. That is a huge number. Two out of three people are doubly infected and the nucleus of these epidemics, for which South Africa is concerned, seems to be the Kwazulu Natal province, where 39% of pregnant women are HIV positive, whereas the national average is about 29%. It is not a coincidence, then, that in the hospital of KingDinuZulu of Durban, one of the few paediatric departments was created, entirely dedicated to children affected by tuberculosis, where eight out of ten are also HIV positive. The director is Dr. Baboo Sunkarie, who has seen first-hand over the years how tuberculosis and its more resistant forms evolved. «In 2006, out of 32 beds only 4 were occupied by children affected by drug resistant TB, both MDR and XDR. Now there is not one child who has not been infected by one these forms of TB. We are noticing more and more how TB and HIV go hand in hand and develop in the same direction». According to Dr. Sunkarie, this depends mostly on the environment in which children are forced to grow up and by their living conditions «The majority of the children now in the ward come from tough social environments, from poor areas, where 6 or 7 people sleep in the same room, where sexual precautions are not used and hygiene in general is very low. This is how the bacteria spreads, and this is why the children on this ward – 90% of whom were born to HIV positive mothers – even if they successfully defeat TB, once they get home they are infected again».
+                Het gebrek aan informatie is zeker een probleem, maar er is ook de angst. De angst om op weg naar het hospitaal je buren tegen te komen, de angst om aan je familie te moeten zeggen dat je TB-positief bent. De angst om alleen komen te staan, genegeerd te worden door de familie en de gemeenschap. In 2015 is in Zuid-Afrika het TB-stigma nog steeds erg sterk. ‘Toen ik twee jaar geleden ontdekte dat ik én TB-positief én HIV-positief was, verdween mijn familie’, zegt Moses Michize, 42 jaar, MDR-TB positief, zittend voor zijn houten hut in het Clare Estates township vlakbij Durban. ‘Op een dag moest ik naar een viering gaan, samen met mijn familie. Ik had net vernomen dat ik besmet was met TB. Ik was moe en erg triest, dus ik vertelde het nieuws aan mijn moeder. Ik heb sindsdien niets meer van hen gehoord, zelfs geen telefoontje of een bezoek tijdens mijn behandeling. Voor hen besta ik niet langer.’ Om sociaal isolement te voorkomen is het dus beter om de ziekte te verzwijgen. Dit is eveens een reden waarom TB zich, net als HIV, blijft verspreiden, in het bijzonder in de armere regio’s en in de meest verwoeste buitenwijken. Het stigma is een even krachtige moordenaar als de ziekte zelf.
+                <br>
+                <br> ‘De verschrikkelijke tweeling’, dat is de bijnaam die dokters en experts aan tuberculose en HIV geven. Al te vaak gaan ze hand in hand. 70% van de TB-besmetten zijn ook HIV-positief. Dat is een hoog cijfer. Twee op drie mensen zijn besmet met beide ziekten en de kern van de epidemie ligt, wat Zuid-Afrika betreft, in de Kwazulu Natal provincie, waar 39% van de zwangere vrouwen HIV-positief zijn, terwijl het nationale gemiddelde rond 29% ligt. Het is dus geen toeval dat in het hospitaal van KinDinuZulu in Durban één van de weinige pediatrische departementen is opgericht waar louter kinderen die besmet zijn met tuberculose worden opgenomen. Acht op tien onder hen is bovendien ook HIV-positief. De directeur is Dr. Baboo Sunkarie, die vanop de eerste rij heeft gezien hoe tuberculose en de meer resistentere vormen ervan mettertijd zijn geëvolueerd. ‘In 2006 waren slechts vier van de 32 bedden bezet door kinderen die waren besmet met drug-resistente TB, zowel MDR als XDR. Vandaar is er niet één kind dat niet besmet is met een van deze vormen van TB. We merken hoe TB en HIV meer en meer hand in hand gaan en zich in dezelfde richting ontwikkelen.’ Volgens Dr. Sunkarie hangt dit grotendeels samen met de omgeving en de levensomstandigheden waarin de kinderen moeten opgroeien. ‘De meerderheid van de kinderen in deze vleugel komen uit een moeilijke sociale omgeving, uit arme wijken waar zes tot zeven mensen in dezelfde kamer slapen, waar seksuele preventive onbestaande is en waar hygiënestandaarden erg laag zijn. Het is de perfecte voedingsbodem voor de verspreiding van bacteriën en dat is waarom kinderen hier – 90% van hen hebben HIV-positieve moeders – zelfs wanneer ze erin slagen om te genezen van TB opnieuw geïnfecteerd zullen raken eenmaal ze naar huis gaan.
 
 
             </p>
         </div>
 
         <div class="medium-6 columns title-header space">
-            <h3>Co-infection Tb-HIV</h3>
+            <h3>Dubbele besmetting TB – HIV</h3>
 
             <hr>
 
-            <h5>Cases registered in South Africa</h5>
+            <h5>Geregistreerde gevallen in Zuid-Afrika</h5>
             <img src="img/graph_tb_hiv_01.png">
             <hr>
 
-            <h5>Co-infected patients mortality rate</h5>
+            <h5>Sterftecijfer van patiënten met een dubbele besmetting</h5>
             <img src="img/graph_tb_hiv_02.png">
 
         </div>
@@ -288,32 +333,32 @@ against Tuberculosis</h2>
     <div class="gray-bg space-p">
         <div class="row">
             <div class="medium-12 columns">
-                <h3>Stories</h3>
+                <h3>Verhalen</h3>
                 <hr>
             </div>
             <ul class="small-block-grid-5 btn-group" data-toggle="buttons-radio">
-                <li id="btn-post" class="overlay-fade-in image-wrapper btn active-section" data-target="interview-01_container">
+                <li id="btn-post iframeRefresher" class="overlay-fade-in image-wrapper btn active-section" data-target="interview-01_container" data-videosrc="http://player.vimeo.com/video/144068611?api=1">
                     <img src="img/profile_dalene.jpg" />
                     <div class="image-overlay-content">
                         <h2>Dalene Von Delft</h2>
                     </div>
                 </li>
 
-                <li id="btn-game" class="overlay-fade-in image-wrapper btn btn btn-primary" data-target="interview-02_container">
+                <li id="btn-game" class="overlay-fade-in image-wrapper btn btn btn-primary" data-target="interview-02_container" data-videosrc="http://player.vimeo.com/video/144071898?api=1">
                     <img src="img/profile_pumeza.jpg" />
                     <div class="image-overlay-content">
                         <h2>Phumeza Tisile</h2>
                     </div>
                 </li>
 
-                <li id="btn-video" class="overlay-fade-in image-wrapper btn" data-target="interview-03_container">
+                <li id="btn-video" class="overlay-fade-in image-wrapper btn" data-target="interview-03_container" data-videosrc="http://player.vimeo.com/video/144068613?api=1">
                     <img src="img/profile_goodman.jpg" />
                     <div class="image-overlay-content">
                         <h2>Goodman Makanta</h2>
                     </div>
                 </li>
 
-                <li id="btn-giveaway" class="overlay-fade-in image-wrapper btn" data-target="interview-04_container">
+                <li id="btn-giveaway" class="overlay-fade-in image-wrapper btn" data-target="interview-04_container" data-videosrc="http://player.vimeo.com/video/144071904?api=1">
 
                     <img src="img/profile_msf.jpg" />
                     <div class="image-overlay-content">
@@ -322,7 +367,7 @@ against Tuberculosis</h2>
 
                 </li>
 
-                <li id="btn-giveaway" class="overlay-fade-in image-wrapper btn" data-target="interview-05_container">
+                <li id="btn-giveaway" class="overlay-fade-in image-wrapper btn" data-target="interview-05_container" data-videosrc="http://player.vimeo.com/video/144071901?api=1">
 
                     <img src="img/profile_green.jpg" />
                     <div class="image-overlay-content">
@@ -339,42 +384,42 @@ against Tuberculosis</h2>
 
                 <div class="medium-8 columns">
                     <div class="vimeoWrap flex-video widescreen vimeo">
-                        <iframe src="http://player.vimeo.com/video/144068611?api=1" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        <iframe class="videoreload" src="http://player.vimeo.com/video/144068611?api=1" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     </div>
                 </div>
                 <div class="medium-4 columns">
                     <h5>Dalene Von Delft</h5>
-                    <span class="didascalie"><p>33 years old, medical doctor</p></span>
+                    <span class="didascalie"><p>33 jaar, medisch arts</p></span>
                     <br />
-                    <p>Dalene caught MDR-TB. She was one of the first white people to get infected. After defeating it, she created TB Proof, an NGO fighting the stigma against TB positive people</p>
+                    <p>Dalene raakte besmet met MDR-TB. Ze was een van de eerste blanken die ziek werd. Na haar genezing richtte ze TB Proof op, een ngo die strijdt tegen het stigma waarmee TB-patiënten te kampen hebben.</p>
                 </div>
             </div>
 
             <div class="row container hide-01" id="interview-02_container">
                 <div class="medium-8 columns">
                     <div class="vimeoWrap flex-video widescreen vimeo">
-                        <iframe src="http://player.vimeo.com/video/144071898?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        <iframe class="videoreload" src="http://player.vimeo.com/video/144071898?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     </div>
                 </div>
                 <div class="medium-4 columns">
                     <h5>Phumeza Tisile</h5>
-                    <span class="didascalie"><p>25 years old</p></span>
+                    <span class="didascalie"><p>25 jaar</p></span>
                     <br />
-                    <p>Phumeza was XDR-TB positive. She lost her hearing for five years because of the drugs she had to take for her treatment. She can finally hear again now, thanks to two cochlear implants. She has also become one of the representatives for the South African fight against TB</p>
+                    <p>Phumeza was XDR-TB positief. Gedurende vijf jaar verloor ze haar gehoor door de medicatie die moest nemen voor haar behandeling. Ze kan nu eindelijk opnieuw horen dankzij twee cochleaire implantaten. Ze is ook een van de vertegenwoordigsters geworden van de Zuid-Afrikaanse strijd tegen TB. </p>
                 </div>
             </div>
 
             <div class="row container hide-01" id="interview-03_container">
                 <div class="medium-8 columns">
                     <div class="vimeoWrap flex-video widescreen vimeo">
-                        <iframe src="http://player.vimeo.com/video/144068613?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        <iframe class="videoreload" src="http://player.vimeo.com/video/144068613?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     </div>
                 </div>
                 <div class="medium-4 columns">
                     <h5>Goodman Makanta</h5>
-                    <span class="didascalie"><p>30 years old</p></span>
+                    <span class="didascalie"><p>30 jaar</p></span>
                     <br />
-                    <p>Goodman was found XDR-TB positive in 2014, he lives in a wood and tin shack in Kayelitsha township, just outside Cape Town
+                    <p>Goodman werd XDR-TB positief in 2014. Hij woont in een uit hout en tin opgetrokken hut in Kayelitsha township, net buiten Kaapstad.
                     </p>
                 </div>
             </div>
@@ -382,28 +427,28 @@ against Tuberculosis</h2>
             <div class="row container hide-01" id="interview-04_container">
                 <div class="medium-8 columns">
                     <div class="vimeoWrap flex-video widescreen vimeo">
-                        <iframe src="http://player.vimeo.com/video/144071904?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        <iframe Name="vid4" src="http://player.vimeo.com/video/144071904?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     </div>
                 </div>
                 <div class="medium-4 columns">
                     <h5>Busisiwe Beko</h5>
-                    <span class="didascalie"><p>34 years old</p></span>
+                    <span class="didascalie"><p>34 jaar</p></span>
                     <br />
-                    <p> Busisiwe was diagnosed HIV and MDR-TB positive in 2007, while she was pregnant. Othandwayo, her second daughter, was born MDR-TB positive. Busisiwe now collaborates with MSF in Kayelitsha township, and runs an informative radio programme on TB</p>
+                    <p> Bij Busisiwe werd HIV en MDR-TB vastgesteld in 2007, tijdens haar zwangerschap. Othandwayo, haar tweede dochter, werd MDR-TB positief geboren. Busisiwe werkt nu samen met Artsen zonder Grenzen in het Kayelitsha township en ze presenteert een informatief radiopgramma over TB.</p>
                 </div>
             </div>
 
             <div class="row container hide-01" id="interview-05_container">
                 <div class="medium-8 columns">
                     <div class="vimeoWrap flex-video widescreen vimeo">
-                        <iframe src="http://player.vimeo.com/video/144071901?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        <iframe Name="vid5" src="http://player.vimeo.com/video/144071901?api=1" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     </div>
                 </div>
                 <div class="medium-4 columns">
                     <h5>Edward Mokoena</h5>
-                    <span class="didascalie"><p>35 years old</p></span>
+                    <span class="didascalie"><p>35 jaar</p></span>
                     <br />
-                    <p>Edward lives in Gugulethu township, near Cape Town. He was diagnosed MDR-TB but doctors gave him the wrong medication, so he suffered serious liver damage. He is better now, but because of the debilitating treatment, he can no longer work. He was the only one in his family who had a job</p>
+                    <p>Edward woont in Guglulethu township, nabij Kaapstad. Men stelde bij hem MDR-TB vast, maar de dokters gaven hem de verkeerde medicatie waardoor hij serieuze leverschade opliep. Hij is beter nu, maar door de slopende behandeling kan hij niet langer werken. Hij was de enige in zijn familie met een job. </p>
                 </div>
             </div>
         </div>
@@ -412,7 +457,8 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="large-9 columns space">
             <p>
-                Children, adults, men, women, black, white, TB even more than HIV, couldn’t care less. The reason is quite simple: as it is airborne, anyone can breathe it in. Ivan Ross, a 61 year old fisherman, caught it, and from his small wood-shack on the top of a hill, he tells us he got sick in the hold of a fishing boat, as well as a white woman from a very rich part of the city of Cape town, Somerset West: Dalene Von Delft, a 33 year old doctor, infected because of her job which takes her really close to sick patients. But there is a community in South Africa, which more than others, historically, has had to deal with this disease, and nowadays with its more resistant forms. They are the South African miners, the backbone of South African industry. For centuries TB has affected miners more than any other workers, and the spread of MDR–TB and XDR-TB is putting even more at risk the life of tens of thousands people. One has to just step out of Johannesburg and go into the stretch of bare hills in this region, just for a few kilometres, to understand how mines are a fundamental and integral part of the South African economy. Carletonville and Westonaria, are only two of the towns where mines represent the nucleus of every sort of activity. Here, among the petrol stations, a group of restaurants and the stretches of houses built for the miners, Tuberculosis continues to claim victims, despite the commitments made by mining companies to guarantee security and the health of the workers. «The basic problem is that mines are, I dare to say, an environment worse than hell itself. Temperatures reach 35-38°C, the air is stagnant, there is no ventilation whatsoever and dust gets into the lungs. And when miners breath silica dust, they are exposed to great risks to their health» explains Georgina Jephson, a lawyer in Johannesburg, who, together with the Richard Spoor Law Office, is committed to defending thousands of miners, in a trial against thirty of the major mining companies of South Africa. This is the biggest trial ever attempted against the mining companies, asking for justice, compensation and healthcare for the miners, who, because of their working conditions, suffer from silicosis. «According to recent studies, one miner in four has got silicosis, and this is the first step towards Tuberculosis». Georgina Jephson continues «The mining companies, especially, those concerned with gold extraction, are not doing enough to protect miners’ health, and the latter are forced to keep up with backbreaking shifts, without the necessary protection».
+                Kinderen, volwassenen, mannen, vrouwen, zwarten, blanken. TB, meer nog dan HIV, maakt geen onderscheid. De reden is eenvoudig: de ziekte is overdraagbaar via de lucht, dus iedereen kan het inademen. Ivan Ross, een 61-jarige visser, raakte besmet. Vanuit zijn kleine houten barak op de top van een heuvel vertelt hij hoe hij ziek werd terwijl hij op een vissersboot was. Daarnaast is er het verhaal van een blanke vrouw uit Somerset West, een zeer welgestelde wijk van Kaapstad. Dalene Von Delft, de 33-jarige arts, werd besmet omdat haar job haar vaak fysiek dichtbij zieke patiënten bracht.
+                <br> Er is echter een bepaalde bevolkingsgroep in Zuid-Afrika die, historisch gezien meer dan anderen, het risico loopt om ziek te worden en vandaag in het bijzonder vaker de meer resistente vormen van TB oploopt. Dat zijn de mijnwerkers, de ruggengraat van de Zuid-Afrikaanse industrie. Gedurende eeuwen heeft TB meer slachtoffers onder mijnwerkers gemaakt dan in eender welke andere bevolkingsgroep. De verspreiding van MDR-TB en XDR-TB brengt het leven van tienduizenden mensen in gevaar. Men hoeft maar net buiten Johannesburg te gaan, een paar kilometer de uitgestrekte kale heuvels van deze regio in, om te begrijpen hoe mijnwerkers een integraal en fundamenteel deel uitmaken van de Zuid-Afrikaanse economie. Carletonville en Westonaria zijn slechts twee van de dorpen waar mijnwerkers de kern vormen van alles. Hier, tussen de benzinestations, een groepje restaurants en de huizen die voor de mijnwerkers zijn gebouwd, blijft tuberculose slachtoffers maken, ondanks de beloften van de mijnbouwbedrijven om de veiligheid en de gezondheid van hun personeel te garanderen. ‘De kern van het probleem is dat mijnen de slechtst denkbare omgeving zijn. De temperaturen lopen op tot 35-38 graden Celsius, er is geen luchtcirculatie noch ventilatie en stof komt zo makkelijk in de longen terecht. En wanneer mijnwerkers silica-stof inademen, worden ze aan hoge gezondheidsrisico’s blootgesteld’, verklaart Georgina Jephson, een advocaat in Johannesburg die, samen met het Richard Spoor Law Office, de belangen van duizenden mijnwerkers verdedigt in een rechtzaak tegen de grootste mijnbouwbedrijven van Zuid-Afrika. Dit is de grootste rechtzaak ooit tegen mijnbouwbedrijven, waarin wordt gepleit voor gerechtigheid, compensatie en gezondheidszorg voor mijnwerkers die, omwille van hun werkomstandigheden, lijden aan silicose, een soort stoflong. ‘Volgens recente studies heeft een op vier mijnwerkers last van silicose en dat betekent de eerste stap richting tuberculose.’ Georgina Jephson gaat door: ‘De mijnbouwbedrijven, zeker die die gespecialiseerd zijn in goudwinning, ondernemen niet genoeg om de gezondheid van de mijnwerkers te beschermen. Het personeel worden verplicht om uitputtende shifts te draaien, zonder de broodnodige bescherming.’
                 <br />
             </p>
         </div>
@@ -421,19 +467,21 @@ against Tuberculosis</h2>
     <div class="row didascalie">
         <div class="large-6 columns">
             <img src="img/tb_img_mine_01.jpg">
-            <h6>A gallery in a gold mine</h6>
+            <h6>Een gang in een goudmijn</h6>
             <p>Sybaie Goldmines, Carletonville</p>
         </div>
         <div class="large-6 columns">
             <img src="img/tb_img_mine_02.jpg">
-            <h6>A miner at work</h6>
+            <h6>Een mijnwerker aan de slag</h6>
             <p>Sybaie Goldmines, Carletonville</p>
         </div>
     </div>
     <div class="row">
         <div class="large-9 columns space">
             <p>
-                Twelve to fourteen hours in asphyxiating heat that makes their overalls stick to their skin. The thick air is difficult to breathe, dust rises at every explosion, the darkness obscures their sight: this is what the life of a miner is made of. Often the explosions are the main origin of the lung conditions that affect the majority of those miners. «I am sure that I got sick in the mine, –Tembe Djais tells us from his home in a small village at the gates of Bizana, in Eastern Province – I was team leader down in the mine, I had control over all the explosions. I was the first to go into the newly opened corridors, and first to breathe the dust before it even touched the ground. I decided to get involved in the trial against the mining companies because as soon as I retired I started to suffer from strong pains in my chest, breathing became difficult and I was coughing constantly. I got extremely thin, I couldn’t eat and I was diagnosed as TB positive. Luckily it was the Drug Susceptible one, and not one of the drug resistant types».
+                Twaalf tot veertien uur in een verstikkende hitte waardoor de werkkleren door het overmatige zweten aan het lichaam plakken. De zware lucht maakt ademen moeilijk, bij elke ontploffing vliegt stof in het rond, de duisternis beneemt het zicht. Dit is hoe het leven van een mijnwerker eruitziet. Meestal zijn het de ontploffingen die de belangrijkste oorzaak vormen van de longaandoeningen waarmee de meerderheid van de mijnwerkers te kampen heeft. ‘Ik ben er zeker van dat ik ziek werd in de mijn’, zegt Tembe Djais in zijn huis in een klein dorp vlakbij Bizana, in Eastern Province. ‘Ik was teamleider in de mijn en controleerde alle ontploffingen. Ik was de eerste om de nieuwe gangen te verkennen en de eerste om het stof in te ademen alvorens het zelfs de grond had geraakt. Ik besloot om mij achter de rechtzaak tegen de mijnbouwbedrijven te scharen, want van zodra ik gepensioneerd was, begon ik erge pijnen in de borststreek te krijgen. Ademen werd moeilijk omdat ik voortdurend moest hoesten. Ik werd erg mager, kon niet eten en kreeg de diagnose dat ik TB-positief was. Gelukkig was het de niet-drugresistente vorm van TB.’
+                <br>
+                <br>
 
             </p>
         </div>
@@ -449,13 +497,13 @@ against Tuberculosis</h2>
     <div class="row">
         <div class="large-6 columns space">
             <p>
-                Despite it being the number one killer in South Africa and the second worldwide, after HIV, due to one single infective agent, according to researchers, doctors, professors and healthcare workers, Tuberculosis does not get the necessary attention or the necessary investments from International donors, and above all, from the pharmaceutical companies. The latter are abandoning, one by one, the investments for research on Tuberculosis, for a more general re-routing of resources towards chronic conditions more than infectious ones. «The explanation is quite simple: the research on TB does not make enough profit – claims Nesri Padtayachi, member of the Caprisa ONG – Moreover, in Western countries, it is looked upon disease of the Third World, of poor people, whereas HIV, according to individual behaviour, is considered a major danger». It is the private sector that is leaving Tuberculosis aside. It is enough to read the names of the companies that have decided to move their resources somewhere else, in the last few years, to find confirmation: Pfizer left in 2012, AstraZeneca in 2013, Novartis in 2014. And it is not a coincidence that the private sector investments in TB researches have diminished by 11.8% between 2012 and 2013, and by a third from 2011 up to today. At this rate, if governments do not intervene first-hand and fill the gap left by the public sector, it will be extremely difficult to reach the one of the targets agreed by the Sustainable Development Goals: to defeat Tuberculosis by 2030. An epidemic which technically though does not exist, according to the director of the Tuberculosis program at WHO, the Italian Mauro Raviglione, because this disease «has become endemic by now, it has found its balance amongst the people, and this makes it even harder to defeat without investing in research».
+                Ondanks het feit dat tuberculose, na HIV, de grootste moordenaar in Zuid-Afrika is en dit voornamelijk door één enkel ineffectief middel, aldus onderzoekers, dokters, professoren en gezondheidswerkers, krijgt het niet de nodige aandacht of investeringen van internationale donoren en in het bijzonder van farmaceutische bedrijven. Deze laatste hevelen stuk voor stuk hun investeringen in onderzoek naar tuberculose over naar onderzoek in meer algemene chronische aandoeningen. Ze zijn niet langer geïnteresseerd in besmettelijke ziekten. ‘De verklaring is vrij eenvoudig: onderzoek naar tuberculose is niet winstgevend genoeg’, beweert Nesri Padtayachi, lid van Caprisa ONG. ‘Meer nog, in westerse landen beschouwt men de ziekte als een probleem van de derde wereld, van armen, terwijl HIV, volgens persoonlijk gedrag, wordt beschouwd als een groter gevaar. Het is de privésector die tuberculose links laat liggen. Dit wordt bevestigd door de namen van de bedrijven die de laatste jaren hebben besloten om hun middelen elders te investeren: Pfizer stopte in 2012, AstraZeneca in 2013, Novartis in 2014. Het is ook geen toeval dat de investeringen uit de privésector met 11,8% zijn gedaald tussen 2012 en 2013 en met een derde van 2011 tot nu. Als dit doorgaat en de overheden niet direct tussenkomen om het gat te vullen, dan wordt het erg moeilijk om een van de overeengekomen Sustainable Development Goals te bereiken: tuberculose verslaan tegen 2030. Het is een epidemie die eigenlijk niet bestaat, volgens de directeur van het tuberculoseprogramma bij de WGO, de Italiaan Mauro Raviglione, want de ziekte is nu endemisch geworden. ‘Tuberculose heeft een balans onder de mensen gevonden en dat maakt het nog moeilijker om het te verslaan, zeker bij gebrek aan investeringen in onderzoek.’
 
             </p>
         </div>
         <div class="medium-6 columns title-header space">
-            <h3>Collapse of fundings</h3>
-            <p>Trends in private investments in research on Tuberculosis</p>
+            <h3>De ineenstorting van fondsen</h3>
+            <p>Trends in privé-investeringen in onderzoek naar tuberculose</p>
             <hr>
             <img src="img/graph_finanziamenti.jpg">
 
@@ -465,8 +513,8 @@ against Tuberculosis</h2>
     <div class="row didascalie">
         <div class="medium-12 columns">
             <img src="img/tb_img_04.jpg">
-            <h6>Ivan Ross, Tb patient</h6>
-            <p>Hout Bay informal settlement, Cape Town
+            <h6>Ivan Ross, TB-patiënt</h6>
+            <p>Hout Bay, onofficiële nederzetting, Kaapstad
             </p>
             <br>
             <br>
@@ -482,18 +530,17 @@ against Tuberculosis</h2>
             </div>
             <div class="medium-4 columns">
 
-                <p>Text e photography:<b>Tomaso Clavarino</b>
-                    <br> Design and video:<b>Isacco Chiaf</b>
+                <p>Tekst en beeld:<b>Tomaso Clavarino</b>
+                    <br> Ontwerp en video:<b>Isacco Chiaf</b>
                     <br> Video Editor:<b>Luca Vigliani</b>
-                    <br> Musics:<b>Michele Sarda e Loris Spanu</b>
-                    <br> Translations:<b> Fay R. Ledvinka</b></p>
+                    <br> Muziek:<b>Michele Sarda e Loris Spanu</b>
+
             </div>
             <div class="medium-4 columns">
-                <p>This investigative report was conducted with the support of the "Innovation in Development Reporting Grant" program of the European Journalism Centre (EJC), financed by the Bill and Melinda Gates Foundation.
+                <p>Dit onderzoeksrapport werd uitgevoerd met de steun van het ‘Innovation in Development Reporting Grant’ programma van het European Journalism Centre (EJC), gefinancierd door de Bill and Melinda Gates Foundation.
             </div>
             <div class="medium-4 columns">
-                <p>Project released under
-                    <br>creative common: cc-nc-by-sa
+                <p>Creative common: cc-nc-by-sa
                     <br><img src="img/cc.png"></p>
 
             </div>
@@ -510,6 +557,24 @@ against Tuberculosis</h2>
     <script src="js/video_control.js"></script>
     <script>
         $(document).foundation();
+
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-1251056-1', 'auto');
+        ga('send', 'pageview');
 
     </script>
 

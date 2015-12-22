@@ -78,9 +78,9 @@
     top: 0;
     width: 100%;
     height: 50px;
-    background-color:#EEECEB;
+    background-color: #EEECEB;
     color: #000;
-    z-index: 10000;
+    z-index: 1000;
 }
 .menu-top-bar h5 {
     padding-top: 10px;
@@ -117,7 +117,7 @@
 }
 .title-header p {
     margin-top: -0.4rem !important;
-    color: #9e0a0f;
+    color: #DC000D;
 }
 .didascalie p {
     margin: -0.4rem 0;
@@ -138,6 +138,7 @@
     font-family: 'Droid Serif', serif;
     font-weight: 700;
     font-style: normal;
+    color: #DC000D;
 }
 
 /*-----------------------MORTALITY GRAPH-------------------*/
