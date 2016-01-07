@@ -294,7 +294,11 @@ footer p {
 
 /* Define mobile styles */
 
-@media only screen and (max-width: 40em) {}
+@media only screen and (max-width: 40em) {
+    div.social {
+        padding: 0;
+    }
+}
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
