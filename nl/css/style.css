@@ -307,7 +307,15 @@ footer p {
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
 // Medium screens
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+    div.social {
+        padding: 0;
+        font-size: 5px;
+    }
+    video {
+        height: 500px;
+    }
+}
 
 /* min-width 641px, medium screens */
 
