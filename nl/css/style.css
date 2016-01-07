@@ -1,12 +1,36 @@
 /*-----------------------Video INTRO-------------------*/
 
-.video-bg {
+
+/*.video-bg {
     width: 100%;
     height: 95%;
     position: relative;
     display: block;
     background: #000;
     max-height: 720px;
+}*/
+
+.video-bg {
+    width: 100%;
+    /*height: 60%;
+	min-height: 300px;
+	*/
+    margin-top: 45px;
+    position: relative;
+    display: block;
+    background: #000;
+    max-height: 720px;
+}
+@media(min-width: 640px) {
+    .video-bg {
+        margin-top: 0;
+        width: 100%;
+        height: 95%;
+        position: relative;
+        display: block;
+        background: #000;
+        max-height: 720px;
+    }
 }
 .video-bg img {
     position: absolute;
@@ -311,9 +335,6 @@ footer p {
     div.social {
         padding: 0;
         font-size: 5px;
-    }
-    video {
-        height: 500px;
     }
 }
 
